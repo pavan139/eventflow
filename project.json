@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "15",
+  "repository_name": "eventflow",
+  "title": "Eventflow",
+  "package": "eventflow",
+  "language": "python",
+  "field": "Stream processing",
+  "focus": "Event-time windows, watermarks, retractions, checkpoint barriers and deterministic recovery",
+  "ai_connection": "Online feature and telemetry processing with late data",
+  "smoke_commands": [
+    {
+      "name": "demo",
+      "args": []
+    },
+    {
+      "name": "evaluate",
+      "args": []
+    }
+  ],
+  "layout": {
+    "docs_root": "protocol",
+    "tests_root": "recovery_tests",
+    "tools_root": "dev",
+    "config_root": "streams",
+    "examples_root": "traces",
+    "verifier": "dev/check_recovery.py",
+    "source_roots": [
+      "src"
+    ],
+    "documents": {
+      "architecture": "protocol/event-to-sink.md",
+      "design": "protocol/watermark-contract.md",
+      "review": "protocol/replay-checks.md",
+      "experiments": "protocol/window-histories.md",
+      "publishing": "protocol/sharing-processor.md",
+      "validation": "protocol/verified-checkpoints.md"
+    }
+  }
+}
