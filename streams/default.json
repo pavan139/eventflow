@@ -1,0 +1,13 @@
+{
+  "partitions": [
+    "left",
+    "right"
+  ],
+  "window_size": 10,
+  "slide": 10,
+  "out_of_orderness": 2,
+  "allowed_lateness": 5,
+  "max_inputs": 5000,
+  "max_windows": 20000,
+  "max_changes": 100000
+}
