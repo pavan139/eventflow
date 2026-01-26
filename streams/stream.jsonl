@@ -1,0 +1,11 @@
+{"key": "feature", "kind": "event", "offset": 0, "partition": "left", "timestamp": 2, "value": 3}
+{"key": "feature", "kind": "event", "offset": 0, "partition": "right", "timestamp": 3, "value": 4}
+{"key": "feature", "kind": "advance", "offset": 1, "partition": "left", "timestamp": 12, "value": 1}
+{"key": "feature", "kind": "advance", "offset": 1, "partition": "right", "timestamp": 12, "value": 1}
+{"key": "feature", "kind": "event", "offset": 2, "partition": "left", "timestamp": 4, "value": 5}
+{"key": "feature", "kind": "event", "offset": 2, "partition": "left", "timestamp": 4, "value": 5}
+{"key": "feature", "kind": "advance", "offset": 3, "partition": "left", "timestamp": 17, "value": 1}
+{"key": "feature", "kind": "advance", "offset": 2, "partition": "right", "timestamp": 17, "value": 1}
+{"key": "feature", "kind": "event", "offset": 3, "partition": "right", "timestamp": 5, "value": 99}
+{"key": "feature", "kind": "advance", "offset": 4, "partition": "left", "timestamp": 40, "value": 1}
+{"key": "feature", "kind": "advance", "offset": 4, "partition": "right", "timestamp": 40, "value": 1}
