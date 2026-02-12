@@ -1,0 +1,179 @@
+{
+  "inputs": 11,
+  "outcomes": {
+    "committed": 0,
+    "duplicate": 11
+  },
+  "state": {
+    "active_windows": [],
+    "changes": [
+      {
+        "count": 2,
+        "end": 10,
+        "key": "feature",
+        "operation": "upsert",
+        "revision": 1,
+        "sequence": 1,
+        "start": 0,
+        "total": 7,
+        "watermark": 10
+      },
+      {
+        "count": 2,
+        "end": 10,
+        "key": "feature",
+        "operation": "retract",
+        "revision": 2,
+        "sequence": 2,
+        "start": 0,
+        "total": 7,
+        "watermark": 10
+      },
+      {
+        "count": 3,
+        "end": 10,
+        "key": "feature",
+        "operation": "upsert",
+        "revision": 2,
+        "sequence": 3,
+        "start": 0,
+        "total": 12,
+        "watermark": 10
+      },
+      {
+        "count": 3,
+        "end": 10,
+        "key": "feature",
+        "operation": "finalize",
+        "revision": 2,
+        "sequence": 4,
+        "start": 0,
+        "total": 12,
+        "watermark": 15
+      }
+    ],
+    "checkpoints": [
+      {
+        "accepted_windows": 1,
+        "dropped_windows": 0,
+        "kind": "event",
+        "offset": 0,
+        "partition": "left",
+        "sequence": 1,
+        "watermark": -1
+      },
+      {
+        "accepted_windows": 1,
+        "dropped_windows": 0,
+        "kind": "event",
+        "offset": 0,
+        "partition": "right",
+        "sequence": 2,
+        "watermark": 0
+      },
+      {
+        "accepted_windows": 0,
+        "dropped_windows": 0,
+        "kind": "advance",
+        "offset": 1,
+        "partition": "left",
+        "sequence": 3,
+        "watermark": 1
+      },
+      {
+        "accepted_windows": 0,
+        "dropped_windows": 0,
+        "kind": "advance",
+        "offset": 1,
+        "partition": "right",
+        "sequence": 4,
+        "watermark": 10
+      },
+      {
+        "accepted_windows": 1,
+        "dropped_windows": 0,
+        "kind": "event",
+        "offset": 2,
+        "partition": "left",
+        "sequence": 5,
+        "watermark": 10
+      },
+      {
+        "accepted_windows": 0,
+        "dropped_windows": 0,
+        "kind": "advance",
+        "offset": 3,
+        "partition": "left",
+        "sequence": 6,
+        "watermark": 10
+      },
+      {
+        "accepted_windows": 0,
+        "dropped_windows": 0,
+        "kind": "advance",
+        "offset": 2,
+        "partition": "right",
+        "sequence": 7,
+        "watermark": 15
+      },
+      {
+        "accepted_windows": 0,
+        "dropped_windows": 1,
+        "kind": "event",
+        "offset": 3,
+        "partition": "right",
+        "sequence": 8,
+        "watermark": 15
+      },
+      {
+        "accepted_windows": 0,
+        "dropped_windows": 0,
+        "kind": "advance",
+        "offset": 4,
+        "partition": "left",
+        "sequence": 9,
+        "watermark": 15
+      },
+      {
+        "accepted_windows": 0,
+        "dropped_windows": 0,
+        "kind": "advance",
+        "offset": 4,
+        "partition": "right",
+        "sequence": 10,
+        "watermark": 38
+      }
+    ],
+    "config": {
+      "allowed_lateness": 5,
+      "max_changes": 100000,
+      "max_inputs": 5000,
+      "max_windows": 20000,
+      "out_of_orderness": 2,
+      "partitions": [
+        "left",
+        "right"
+      ],
+      "slide": 10,
+      "window_size": 10
+    },
+    "config_sha256": "8c06cee186cf9f2d55758968cb579b89388d26934b2b13a4045b3bf0202778d5",
+    "offset_count": 10,
+    "partitions": {
+      "left": 40,
+      "right": 40
+    },
+    "sink": [
+      {
+        "count": 3,
+        "end": 10,
+        "final": 1,
+        "key": "feature",
+        "revision": 2,
+        "start": 0,
+        "total": 12
+      }
+    ],
+    "watermark": 38
+  }
+}
