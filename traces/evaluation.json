@@ -1,0 +1,191 @@
+{
+  "cases": [
+    {
+      "changes": 2,
+      "id": "slide-10-lateness-0-crash-None",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 2,
+      "id": "slide-10-lateness-0-crash-before_commit",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 2,
+      "id": "slide-10-lateness-0-crash-after_commit",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 4,
+      "id": "slide-10-lateness-5-crash-None",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 4,
+      "id": "slide-10-lateness-5-crash-before_commit",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 4,
+      "id": "slide-10-lateness-5-crash-after_commit",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 2,
+      "id": "slide-5-lateness-0-crash-None",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 2,
+      "id": "slide-5-lateness-0-crash-before_commit",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 2,
+      "id": "slide-5-lateness-0-crash-after_commit",
+      "passed": true,
+      "windows": 1
+    },
+    {
+      "changes": 6,
+      "id": "slide-5-lateness-5-crash-None",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 6,
+      "id": "slide-5-lateness-5-crash-before_commit",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 6,
+      "id": "slide-5-lateness-5-crash-after_commit",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 4,
+      "id": "slide-3-lateness-0-crash-None",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 4,
+      "id": "slide-3-lateness-0-crash-before_commit",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 4,
+      "id": "slide-3-lateness-0-crash-after_commit",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 8,
+      "id": "slide-3-lateness-5-crash-None",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 8,
+      "id": "slide-3-lateness-5-crash-before_commit",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 8,
+      "id": "slide-3-lateness-5-crash-after_commit",
+      "passed": true,
+      "windows": 2
+    },
+    {
+      "changes": 36,
+      "id": "out-of-order-seed-0",
+      "passed": true,
+      "windows": 14
+    },
+    {
+      "changes": 62,
+      "id": "out-of-order-seed-1",
+      "passed": true,
+      "windows": 14
+    },
+    {
+      "changes": 46,
+      "id": "out-of-order-seed-2",
+      "passed": true,
+      "windows": 16
+    },
+    {
+      "changes": 28,
+      "id": "out-of-order-seed-3",
+      "passed": true,
+      "windows": 10
+    },
+    {
+      "changes": 72,
+      "id": "out-of-order-seed-4",
+      "passed": true,
+      "windows": 19
+    },
+    {
+      "changes": 74,
+      "id": "out-of-order-seed-5",
+      "passed": true,
+      "windows": 15
+    },
+    {
+      "changes": 72,
+      "id": "out-of-order-seed-6",
+      "passed": true,
+      "windows": 14
+    },
+    {
+      "changes": 80,
+      "id": "out-of-order-seed-7",
+      "passed": true,
+      "windows": 20
+    },
+    {
+      "changes": 46,
+      "id": "out-of-order-seed-8",
+      "passed": true,
+      "windows": 17
+    },
+    {
+      "changes": 56,
+      "id": "out-of-order-seed-9",
+      "passed": true,
+      "windows": 15
+    },
+    {
+      "changes": 62,
+      "id": "out-of-order-seed-10",
+      "passed": true,
+      "windows": 13
+    },
+    {
+      "changes": 60,
+      "id": "out-of-order-seed-11",
+      "passed": true,
+      "windows": 18
+    }
+  ],
+  "dataset_sha256": "ac62dc2750762f6f6086b1a53b8b6bb745d5649d35d2f90ca7e9d55cc02abefb",
+  "external_services_called": false,
+  "guarantee_scope": "Atomic local SQLite transaction, replay identity ledger and local sink.",
+  "passed": 30,
+  "provenance": "synthetic local event-time streams",
+  "schema_version": 1,
+  "total": 30
+}
