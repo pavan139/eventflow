@@ -1,0 +1,992 @@
+{
+  "schema_version": 3,
+  "generated_at_utc": "2026-11-15T04:20:24.925292+00:00",
+  "repository": "eventflow",
+  "field": "Stream processing",
+  "ai_connection": "Online feature and telemetry processing with late data",
+  "language": "python",
+  "toolchain": null,
+  "source_sha256": "a3e6e1f977a327d20a4f57ac3fffbfdb117256d28497b76463798b80667e5947",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "scope": "implemented_systems_and_controlled_cpu_experiments",
+  "tests_discovered": 17,
+  "tests_skipped": 0,
+  "tests_executed": 17,
+  "external_provider_calls": false,
+  "passed": true,
+  "checks": [
+    {
+      "name": "metadata_and_documentation",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "lint",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "All checks passed!\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "recovery_tests",
+        "dev"
+      ],
+      "seconds": 0.183992
+    },
+    {
+      "name": "format",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "8 files already formatted\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "src",
+        "recovery_tests",
+        "dev"
+      ],
+      "seconds": 0.149668
+    },
+    {
+      "name": "compile",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "recovery_tests",
+        "dev"
+      ],
+      "seconds": 0.199968
+    },
+    {
+      "name": "unit_tests",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stdout_truncated": false,
+      "stderr": "test_capacity_failure_is_an_atomic_rollback (test_eventflow.EventflowTests.test_capacity_failure_is_an_atomic_rollback) ... ok\ntest_changelog_conflicts_and_missing_retractions_fail (test_eventflow.EventflowTests.test_changelog_conflicts_and_missing_retractions_fail) ... ok\ntest_cli_consumes_and_replays_real_source_against_the_same_database (test_eventflow.EventflowTests.test_cli_consumes_and_replays_real_source_against_the_same_database) ... ok\ntest_config_changes_cannot_reinterpret_a_checkpoint (test_eventflow.EventflowTests.test_config_changes_cannot_reinterpret_a_checkpoint) ... ok\ntest_duplicate_and_conflicting_offsets_do_not_mutate_state (test_eventflow.EventflowTests.test_duplicate_and_conflicting_offsets_do_not_mutate_state) ... ok\ntest_exact_boundary_is_next_tumbling_window (test_eventflow.EventflowTests.test_exact_boundary_is_next_tumbling_window) ... ok\ntest_independent_offline_experiments (test_eventflow.EventflowTests.test_independent_offline_experiments) ... ok\ntest_invalid_partition_and_untrusted_arguments_are_rejected (test_eventflow.EventflowTests.test_invalid_partition_and_untrusted_arguments_are_rejected) ... ok\ntest_largest_admitted_event_can_be_drained_with_a_bounded_progress_marker (test_eventflow.EventflowTests.test_largest_admitted_event_can_be_drained_with_a_bounded_progress_marker) ... ok\ntest_late_correction_retracts_then_upserts_and_closure_is_inclusive (test_eventflow.EventflowTests.test_late_correction_retracts_then_upserts_and_closure_is_inclusive) ... ok\ntest_partition_minimum_blocks_early_emission (test_eventflow.EventflowTests.test_partition_minimum_blocks_early_emission) ... ok\ntest_postcommit_crash_replay_does_not_repeat_sink_correction (test_eventflow.EventflowTests.test_postcommit_crash_replay_does_not_repeat_sink_correction) ... ok\ntest_precommit_crash_rolls_back_late_sink_revision_and_source_state (test_eventflow.EventflowTests.test_precommit_crash_rolls_back_late_sink_revision_and_source_state) ... ok\ntest_sink_changelog_capacity_rolls_back_emission_and_watermark (test_eventflow.EventflowTests.test_sink_changelog_capacity_rolls_back_emission_and_watermark) ... ok\ntest_sliding_memberships_can_be_partly_too_late (test_eventflow.EventflowTests.test_sliding_memberships_can_be_partly_too_late) ... ok\ntest_sliding_window_capacity_cannot_leave_half_an_event (test_eventflow.EventflowTests.test_sliding_window_capacity_cannot_leave_half_an_event) ... ok\ntest_wal_and_full_sync_are_enabled (test_eventflow.EventflowTests.test_wal_and_full_sync_are_enabled) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 3.090s\n\nOK\n",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "recovery_tests",
+        "-v"
+      ],
+      "seconds": 3.374739
+    },
+    {
+      "name": "demo",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "eventflow",
+        "demo",
+        "--output",
+        "/tmp/cli-reports-tg8do7fg/demo.json"
+      ],
+      "seconds": 0.165743,
+      "report": {
+        "crash_injected": true,
+        "oracle_windows": [
+          {
+            "count": 3,
+            "end": 10,
+            "final": 1,
+            "key": "feature",
+            "start": 0,
+            "total": 12
+          }
+        ],
+        "passed": true,
+        "replay_changed_state": false,
+        "scope": "Local SQLite state, source ledger and sink only; no external exactly-once guarantee.",
+        "snapshot": {
+          "active_windows": [],
+          "changes": [
+            {
+              "count": 2,
+              "end": 10,
+              "key": "feature",
+              "operation": "upsert",
+              "revision": 1,
+              "sequence": 1,
+              "start": 0,
+              "total": 7,
+              "watermark": 10
+            },
+            {
+              "count": 2,
+              "end": 10,
+              "key": "feature",
+              "operation": "retract",
+              "revision": 2,
+              "sequence": 2,
+              "start": 0,
+              "total": 7,
+              "watermark": 10
+            },
+            {
+              "count": 3,
+              "end": 10,
+              "key": "feature",
+              "operation": "upsert",
+              "revision": 2,
+              "sequence": 3,
+              "start": 0,
+              "total": 12,
+              "watermark": 10
+            },
+            {
+              "count": 3,
+              "end": 10,
+              "key": "feature",
+              "operation": "finalize",
+              "revision": 2,
+              "sequence": 4,
+              "start": 0,
+              "total": 12,
+              "watermark": 15
+            }
+          ],
+          "checkpoints": [
+            {
+              "accepted_windows": 1,
+              "dropped_windows": 0,
+              "kind": "event",
+              "offset": 0,
+              "partition": "left",
+              "sequence": 1,
+              "watermark": -1
+            },
+            {
+              "accepted_windows": 1,
+              "dropped_windows": 0,
+              "kind": "event",
+              "offset": 0,
+              "partition": "right",
+              "sequence": 2,
+              "watermark": 0
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 1,
+              "partition": "left",
+              "sequence": 3,
+              "watermark": 1
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 1,
+              "partition": "right",
+              "sequence": 4,
+              "watermark": 10
+            },
+            {
+              "accepted_windows": 1,
+              "dropped_windows": 0,
+              "kind": "event",
+              "offset": 2,
+              "partition": "left",
+              "sequence": 5,
+              "watermark": 10
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 3,
+              "partition": "left",
+              "sequence": 6,
+              "watermark": 10
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 2,
+              "partition": "right",
+              "sequence": 7,
+              "watermark": 15
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 1,
+              "kind": "event",
+              "offset": 3,
+              "partition": "right",
+              "sequence": 8,
+              "watermark": 15
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 4,
+              "partition": "left",
+              "sequence": 9,
+              "watermark": 15
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 4,
+              "partition": "right",
+              "sequence": 10,
+              "watermark": 38
+            }
+          ],
+          "config": {
+            "allowed_lateness": 5,
+            "max_changes": 100000,
+            "max_inputs": 5000,
+            "max_windows": 20000,
+            "out_of_orderness": 2,
+            "partitions": [
+              "left",
+              "right"
+            ],
+            "slide": 10,
+            "window_size": 10
+          },
+          "config_sha256": "8c06cee186cf9f2d55758968cb579b89388d26934b2b13a4045b3bf0202778d5",
+          "offset_count": 10,
+          "partitions": {
+            "left": 40,
+            "right": 40
+          },
+          "sink": [
+            {
+              "count": 3,
+              "end": 10,
+              "final": 1,
+              "key": "feature",
+              "revision": 2,
+              "start": 0,
+              "total": 12
+            }
+          ],
+          "watermark": 38
+        }
+      }
+    },
+    {
+      "name": "evaluate",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "eventflow",
+        "evaluate",
+        "--output",
+        "/tmp/cli-reports-tg8do7fg/evaluate.json"
+      ],
+      "seconds": 1.126548,
+      "report": {
+        "cases": [
+          {
+            "changes": 2,
+            "id": "slide-10-lateness-0-crash-None",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-10-lateness-0-crash-before_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-10-lateness-0-crash-after_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 4,
+            "id": "slide-10-lateness-5-crash-None",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 4,
+            "id": "slide-10-lateness-5-crash-before_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 4,
+            "id": "slide-10-lateness-5-crash-after_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-5-lateness-0-crash-None",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-5-lateness-0-crash-before_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-5-lateness-0-crash-after_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 6,
+            "id": "slide-5-lateness-5-crash-None",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 6,
+            "id": "slide-5-lateness-5-crash-before_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 6,
+            "id": "slide-5-lateness-5-crash-after_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 4,
+            "id": "slide-3-lateness-0-crash-None",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 4,
+            "id": "slide-3-lateness-0-crash-before_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 4,
+            "id": "slide-3-lateness-0-crash-after_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 8,
+            "id": "slide-3-lateness-5-crash-None",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 8,
+            "id": "slide-3-lateness-5-crash-before_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 8,
+            "id": "slide-3-lateness-5-crash-after_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 36,
+            "id": "out-of-order-seed-0",
+            "passed": true,
+            "windows": 14
+          },
+          {
+            "changes": 62,
+            "id": "out-of-order-seed-1",
+            "passed": true,
+            "windows": 14
+          },
+          {
+            "changes": 46,
+            "id": "out-of-order-seed-2",
+            "passed": true,
+            "windows": 16
+          },
+          {
+            "changes": 28,
+            "id": "out-of-order-seed-3",
+            "passed": true,
+            "windows": 10
+          },
+          {
+            "changes": 72,
+            "id": "out-of-order-seed-4",
+            "passed": true,
+            "windows": 19
+          },
+          {
+            "changes": 74,
+            "id": "out-of-order-seed-5",
+            "passed": true,
+            "windows": 15
+          },
+          {
+            "changes": 72,
+            "id": "out-of-order-seed-6",
+            "passed": true,
+            "windows": 14
+          },
+          {
+            "changes": 80,
+            "id": "out-of-order-seed-7",
+            "passed": true,
+            "windows": 20
+          },
+          {
+            "changes": 46,
+            "id": "out-of-order-seed-8",
+            "passed": true,
+            "windows": 17
+          },
+          {
+            "changes": 56,
+            "id": "out-of-order-seed-9",
+            "passed": true,
+            "windows": 15
+          },
+          {
+            "changes": 62,
+            "id": "out-of-order-seed-10",
+            "passed": true,
+            "windows": 13
+          },
+          {
+            "changes": 60,
+            "id": "out-of-order-seed-11",
+            "passed": true,
+            "windows": 18
+          }
+        ],
+        "dataset_sha256": "ac62dc2750762f6f6086b1a53b8b6bb745d5649d35d2f90ca7e9d55cc02abefb",
+        "external_services_called": false,
+        "guarantee_scope": "Atomic local SQLite transaction, replay identity ledger and local sink.",
+        "passed": 30,
+        "provenance": "synthetic local event-time streams",
+        "schema_version": 1,
+        "total": 30
+      }
+    },
+    {
+      "name": "wheel_build",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "Processing /workspace/ai-adjacent-repositories/eventflow\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: eventflow\n  Building wheel for eventflow (pyproject.toml): started\n  Building wheel for eventflow (pyproject.toml): finished with status 'done'\n  Created wheel for eventflow: filename=eventflow-0.1.0-py3-none-any.whl size=13170 sha256=b544b471ff4e21dff67d976788b111d6592240a0582e4f38cefcac466e61ab3f\n  Stored in directory: /tmp/pip-ephem-wheel-cache-rd8yirkn/wheels/02/8c/25/164366cbcf8a9a70fc07742018a343cd8f3fbca5d1ba1f7323\nSuccessfully built eventflow\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/workspace/applied-ai-labs/.venv/bin/python",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--no-build-isolation",
+        "--no-index",
+        "--wheel-dir",
+        "/tmp/cold-wheel-qyzozh5b/wheels",
+        "."
+      ],
+      "seconds": 1.881908
+    },
+    {
+      "name": "wheel_install",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "Processing ./wheels/eventflow-0.1.0-py3-none-any.whl\nInstalling collected packages: eventflow\nSuccessfully installed eventflow-0.1.0\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/tmp/cold-wheel-qyzozh5b/environment/bin/python",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-index",
+        "/tmp/cold-wheel-qyzozh5b/wheels/eventflow-0.1.0-py3-none-any.whl"
+      ],
+      "seconds": 0.818331
+    },
+    {
+      "name": "wheel_import_origin",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "/tmp/cold-wheel-qyzozh5b/environment/lib/python3.12/site-packages/eventflow/__init__.py\n",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/tmp/cold-wheel-qyzozh5b/environment/bin/python",
+        "-I",
+        "-c",
+        "import eventflow as module; import sys; from pathlib import Path; assert Path(module.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()); print(module.__file__)"
+      ],
+      "seconds": 0.137616
+    },
+    {
+      "name": "wheel_demo",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/tmp/cold-wheel-qyzozh5b/environment/bin/python",
+        "-I",
+        "-m",
+        "eventflow",
+        "demo",
+        "--output",
+        "/tmp/cli-reports-xpk9e0fx/demo.json"
+      ],
+      "seconds": 0.165427,
+      "report": {
+        "crash_injected": true,
+        "oracle_windows": [
+          {
+            "count": 3,
+            "end": 10,
+            "final": 1,
+            "key": "feature",
+            "start": 0,
+            "total": 12
+          }
+        ],
+        "passed": true,
+        "replay_changed_state": false,
+        "scope": "Local SQLite state, source ledger and sink only; no external exactly-once guarantee.",
+        "snapshot": {
+          "active_windows": [],
+          "changes": [
+            {
+              "count": 2,
+              "end": 10,
+              "key": "feature",
+              "operation": "upsert",
+              "revision": 1,
+              "sequence": 1,
+              "start": 0,
+              "total": 7,
+              "watermark": 10
+            },
+            {
+              "count": 2,
+              "end": 10,
+              "key": "feature",
+              "operation": "retract",
+              "revision": 2,
+              "sequence": 2,
+              "start": 0,
+              "total": 7,
+              "watermark": 10
+            },
+            {
+              "count": 3,
+              "end": 10,
+              "key": "feature",
+              "operation": "upsert",
+              "revision": 2,
+              "sequence": 3,
+              "start": 0,
+              "total": 12,
+              "watermark": 10
+            },
+            {
+              "count": 3,
+              "end": 10,
+              "key": "feature",
+              "operation": "finalize",
+              "revision": 2,
+              "sequence": 4,
+              "start": 0,
+              "total": 12,
+              "watermark": 15
+            }
+          ],
+          "checkpoints": [
+            {
+              "accepted_windows": 1,
+              "dropped_windows": 0,
+              "kind": "event",
+              "offset": 0,
+              "partition": "left",
+              "sequence": 1,
+              "watermark": -1
+            },
+            {
+              "accepted_windows": 1,
+              "dropped_windows": 0,
+              "kind": "event",
+              "offset": 0,
+              "partition": "right",
+              "sequence": 2,
+              "watermark": 0
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 1,
+              "partition": "left",
+              "sequence": 3,
+              "watermark": 1
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 1,
+              "partition": "right",
+              "sequence": 4,
+              "watermark": 10
+            },
+            {
+              "accepted_windows": 1,
+              "dropped_windows": 0,
+              "kind": "event",
+              "offset": 2,
+              "partition": "left",
+              "sequence": 5,
+              "watermark": 10
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 3,
+              "partition": "left",
+              "sequence": 6,
+              "watermark": 10
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 2,
+              "partition": "right",
+              "sequence": 7,
+              "watermark": 15
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 1,
+              "kind": "event",
+              "offset": 3,
+              "partition": "right",
+              "sequence": 8,
+              "watermark": 15
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 4,
+              "partition": "left",
+              "sequence": 9,
+              "watermark": 15
+            },
+            {
+              "accepted_windows": 0,
+              "dropped_windows": 0,
+              "kind": "advance",
+              "offset": 4,
+              "partition": "right",
+              "sequence": 10,
+              "watermark": 38
+            }
+          ],
+          "config": {
+            "allowed_lateness": 5,
+            "max_changes": 100000,
+            "max_inputs": 5000,
+            "max_windows": 20000,
+            "out_of_orderness": 2,
+            "partitions": [
+              "left",
+              "right"
+            ],
+            "slide": 10,
+            "window_size": 10
+          },
+          "config_sha256": "8c06cee186cf9f2d55758968cb579b89388d26934b2b13a4045b3bf0202778d5",
+          "offset_count": 10,
+          "partitions": {
+            "left": 40,
+            "right": 40
+          },
+          "sink": [
+            {
+              "count": 3,
+              "end": 10,
+              "final": 1,
+              "key": "feature",
+              "revision": 2,
+              "start": 0,
+              "total": 12
+            }
+          ],
+          "watermark": 38
+        }
+      }
+    },
+    {
+      "name": "wheel_evaluate",
+      "passed": true,
+      "returncode": 0,
+      "stdout": "",
+      "stdout_truncated": false,
+      "stderr": "",
+      "stderr_truncated": false,
+      "command": [
+        "/tmp/cold-wheel-qyzozh5b/environment/bin/python",
+        "-I",
+        "-m",
+        "eventflow",
+        "evaluate",
+        "--output",
+        "/tmp/cli-reports-xpk9e0fx/evaluate.json"
+      ],
+      "seconds": 1.295764,
+      "report": {
+        "cases": [
+          {
+            "changes": 2,
+            "id": "slide-10-lateness-0-crash-None",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-10-lateness-0-crash-before_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-10-lateness-0-crash-after_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 4,
+            "id": "slide-10-lateness-5-crash-None",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 4,
+            "id": "slide-10-lateness-5-crash-before_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 4,
+            "id": "slide-10-lateness-5-crash-after_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-5-lateness-0-crash-None",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-5-lateness-0-crash-before_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 2,
+            "id": "slide-5-lateness-0-crash-after_commit",
+            "passed": true,
+            "windows": 1
+          },
+          {
+            "changes": 6,
+            "id": "slide-5-lateness-5-crash-None",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 6,
+            "id": "slide-5-lateness-5-crash-before_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 6,
+            "id": "slide-5-lateness-5-crash-after_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 4,
+            "id": "slide-3-lateness-0-crash-None",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 4,
+            "id": "slide-3-lateness-0-crash-before_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 4,
+            "id": "slide-3-lateness-0-crash-after_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 8,
+            "id": "slide-3-lateness-5-crash-None",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 8,
+            "id": "slide-3-lateness-5-crash-before_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 8,
+            "id": "slide-3-lateness-5-crash-after_commit",
+            "passed": true,
+            "windows": 2
+          },
+          {
+            "changes": 36,
+            "id": "out-of-order-seed-0",
+            "passed": true,
+            "windows": 14
+          },
+          {
+            "changes": 62,
+            "id": "out-of-order-seed-1",
+            "passed": true,
+            "windows": 14
+          },
+          {
+            "changes": 46,
+            "id": "out-of-order-seed-2",
+            "passed": true,
+            "windows": 16
+          },
+          {
+            "changes": 28,
+            "id": "out-of-order-seed-3",
+            "passed": true,
+            "windows": 10
+          },
+          {
+            "changes": 72,
+            "id": "out-of-order-seed-4",
+            "passed": true,
+            "windows": 19
+          },
+          {
+            "changes": 74,
+            "id": "out-of-order-seed-5",
+            "passed": true,
+            "windows": 15
+          },
+          {
+            "changes": 72,
+            "id": "out-of-order-seed-6",
+            "passed": true,
+            "windows": 14
+          },
+          {
+            "changes": 80,
+            "id": "out-of-order-seed-7",
+            "passed": true,
+            "windows": 20
+          },
+          {
+            "changes": 46,
+            "id": "out-of-order-seed-8",
+            "passed": true,
+            "windows": 17
+          },
+          {
+            "changes": 56,
+            "id": "out-of-order-seed-9",
+            "passed": true,
+            "windows": 15
+          },
+          {
+            "changes": 62,
+            "id": "out-of-order-seed-10",
+            "passed": true,
+            "windows": 13
+          },
+          {
+            "changes": 60,
+            "id": "out-of-order-seed-11",
+            "passed": true,
+            "windows": 18
+          }
+        ],
+        "dataset_sha256": "ac62dc2750762f6f6086b1a53b8b6bb745d5649d35d2f90ca7e9d55cc02abefb",
+        "external_services_called": false,
+        "guarantee_scope": "Atomic local SQLite transaction, replay identity ledger and local sink.",
+        "passed": 30,
+        "provenance": "synthetic local event-time streams",
+        "schema_version": 1,
+        "total": 30
+      }
+    }
+  ]
+}
